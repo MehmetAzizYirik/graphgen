@@ -1,4 +1,4 @@
-package test;
+package maygenjunit;
 
 import java.util.Arrays;
 import java.util.List;
@@ -17,12 +17,7 @@ import com.google.common.collect.ListMultimap;
 import static org.junit.Assert.assertEquals;
 import java.io.IOException;
 import maygenjunit.Functions;
-//import org.openscience.cdk.CDKTestCase;
 
-
-/**
- * @cdk.module test-standard
- */
 
 public class FunctionsTest {
 	private IAtomContainer atomContainer;
@@ -154,6 +149,6 @@ public class FunctionsTest {
 		Set<String> keys=ecs.keySet();
 		System.out.println(ecs);
 		Functions.depict(atomContainer,"..\\maygenjunit\\bin\\init.png");
-        Functions.classext(atomContainer,"C33",keys);
+                Functions.classext(atomContainer,"C33",keys);
 	}
 }
