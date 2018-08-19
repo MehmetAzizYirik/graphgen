@@ -16,7 +16,6 @@ import com.google.common.collect.ArrayListMultimap;
 import com.google.common.collect.ListMultimap;
 import static org.junit.Assert.assertEquals;
 import java.io.IOException;
-import maygenjunit.Functions;
 
 
 public class FunctionsTest {
@@ -67,8 +66,8 @@ public class FunctionsTest {
 		map.put("C21", 2);
 		map.put("C33", 0);
 		map.put("C33", 1);
-		System.out.println(Functions.ecenum(atomContainer));
-        assertEquals(map,Functions.ecenum(atomContainer));
+		//System.out.println(Functions.ecenum(atomContainer));
+                assertEquals(map,Functions.ecenum(atomContainer));
     }
 	
 	@Test
@@ -97,7 +96,7 @@ public class FunctionsTest {
 	 */
 	public void test_classsatcheck() throws CloneNotSupportedException, CDKException, IOException {
 		List<Integer> list = Arrays.asList(0,1);
-		System.out.println(Functions.classsatcheck(atomContainer, list));
+		//System.out.println(Functions.classsatcheck(atomContainer, list));
 		assertTrue(Functions.classsatcheck(atomContainer, list)==false);
 	}
 	
@@ -106,7 +105,7 @@ public class FunctionsTest {
 	 * The function calculates the open sites of an atom. Here, atom at the 1th index has 1 open site.
 	 */
 	public void test_opencounter() throws CloneNotSupportedException, CDKException, IOException {
-		System.out.println(Functions.opencounter(atomContainer, 1));
+		//System.out.println(Functions.opencounter(atomContainer, 1));
 		assertEquals(1,Functions.opencounter(atomContainer, 1));
 	}
 	
@@ -147,7 +146,7 @@ public class FunctionsTest {
 	public void test_classext() throws CloneNotSupportedException, CDKException, IOException {
 		ListMultimap<String, Integer> ecs=Functions.ecenum(atomContainer);
 		Set<String> keys=ecs.keySet();
-		System.out.println(ecs);
+		//System.out.println(ecs);
 		Functions.depict(atomContainer,"..\\maygenjunit\\bin\\init.png");
                 Functions.classext(atomContainer,"C33",keys);
 	}
