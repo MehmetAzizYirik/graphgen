@@ -1,4 +1,4 @@
-package test;
+package maygenjunit;
 
 import java.util.Arrays;
 import java.util.List;
@@ -18,9 +18,7 @@ import static org.junit.Assert.assertEquals;
 import java.io.IOException;
 import maygenjunit.Functions;
 
-/**
- * @cdk.module test-standard
- */
+
 
 public class FunctionsTest {
 	private IAtomContainer atomContainer;
@@ -151,6 +149,6 @@ public class FunctionsTest {
 		ListMultimap<String, Integer> ecs=Functions.ecenum(atomContainer); //The equivalence class based classification of the atoms.
 		Set<String> keys=ecs.keySet(); //The list of the e.c. labels.
 		Functions.depict(atomContainer,"..\\maygenjunit\\bin\\init.png"); //Depicting the initial structure.
-        Functions.classext(atomContainer,"C33",keys); //Extending the mol from its equivalence class "C33".
+                Functions.classext(atomContainer,"C33",keys); //Extending the mol from its equivalence class "C33".
 	}
 }
